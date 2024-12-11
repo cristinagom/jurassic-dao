@@ -1,4 +1,4 @@
-package entity;
+package model.entity;
 
 import jakarta.persistence.*;
 
@@ -18,7 +18,7 @@ public class Paleontologist {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_excavation")
-    private Excavation idExcavation;
+    private Excavation excavation;
 
     public Integer getId() {
         return id;
@@ -44,12 +44,21 @@ public class Paleontologist {
         this.team = team;
     }
 
-    public Excavation getIdExcavation() {
-        return idExcavation;
+    public Excavation getExcavation() {
+        return excavation;
     }
 
-    public void setIdExcavation(Excavation idExcavation) {
-        this.idExcavation = idExcavation;
+    public void setExcavation(Excavation excavation) {
+        this.excavation = excavation;
     }
 
+    @Override
+    public String toString() {
+        return "Paleontologist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", team=" + team +
+                ", excavation=" + excavation +
+                '}';
+    }
 }

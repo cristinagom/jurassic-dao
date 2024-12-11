@@ -1,4 +1,4 @@
-package entity;
+package model.entity;
 
 import jakarta.persistence.*;
 
@@ -29,4 +29,11 @@ public class Period {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Period{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

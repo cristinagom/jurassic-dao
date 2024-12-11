@@ -1,4 +1,4 @@
-package entity;
+package model.entity;
 
 import jakarta.persistence.*;
 
@@ -74,4 +74,15 @@ public class Dinosaur {
         this.length = length;
     }
 
+    @Override
+    public String toString() {
+        return "Dinosaur{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", idPeriod=" + idPeriod +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", length=" + length +
+                '}';
+    }
 }
